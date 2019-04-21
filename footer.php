@@ -11,7 +11,7 @@
           rel="noopener">rada@przystanmedyczna.org</a><a href="mailto:zarzad@przystanmedyczna.org" target="_blank"
           rel="noopener">zarzad@przystanmedyczna.org</a></div>
     </div>
-    <div class="footer__copy">© 2017 - <?php echo date('Y'); ?> <?php get_bloginfo(); ?>, przygotowanie <a href="http://emfotografia.eu"
+    <div class="footer__copy">© 2017 - <?php echo date('Y'); ?> <span><?php echo get_bloginfo(); ?></span>, przygotowanie <a href="http://emfotografia.eu"
         target="_blank">Marek Cieślar</a></div>
   </div>
 </footer>

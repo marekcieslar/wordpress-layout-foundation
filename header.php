@@ -7,7 +7,7 @@
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
  * @package WordPress
- * @subpackage Twenty_Nineteen
+ * @subpackage mc_foundation
  * @since 1.0.0
  */
 ?><!doctype html>
@@ -18,5 +18,20 @@
 	<?php wp_head(); ?>
 </head>
 
+
 <body <?php body_class(); ?>>
-<div id="page" class="site">
+<nav>
+    <div id="nav" class="nav">
+        <div class="container">
+            <div class="nav__logo">
+                <div id="nav-hamburger" class="nav__hamburger">
+                    <div class="nav__hamburger__strip nav__hamburger__strip--mid"></div>
+                    <div class="nav__hamburger__strip nav__hamburger__strip--top"></div>
+                    <div class="nav__hamburger__strip nav__hamburger__strip--bot"></div>
+                </div>
+            </div>
+            <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'nav__list' ) ); ?>
+        </div>
+    </div>
+</nav>
+

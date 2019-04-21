@@ -19,4 +19,11 @@ function mc_foundation_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mc_foundation_scripts' );
-?>
+
+/**
+ * Register menu
+ */
+function register_mc_foundation_menu() {
+  register_nav_menu('header-menu',__( 'Menu Główne' ));
+}
+add_action( 'init', 'register_mc_foundation_menu' );
