@@ -15,3 +15,8 @@
         target="_blank">Marek Cieślar</a></div>
   </div>
 </footer>
+<?php 
+    wp_footer(); 
+?>
+</body>
+</html>

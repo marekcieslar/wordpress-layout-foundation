@@ -30,8 +30,9 @@
                     <div class="nav__hamburger__strip nav__hamburger__strip--bot"></div>
                 </div>
             </div>
-            <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'nav__list' ) ); ?>
         </div>
+        <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'nav__list' ) ); ?>
     </div>
+    <div id="close-background"></div>
 </nav>
-
+<div id="distance"></div>
