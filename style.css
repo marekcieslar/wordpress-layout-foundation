@@ -1,0 +1,423 @@
+/*
+Theme Name: mc foundation
+Theme URI: http://marekcieslar.pl
+Author: Marek Cieślar
+Author URI: http://marekcieslar.pl/
+Description: to be written
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: 
+*/
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #ffffff;
+  overflow-x: hidden;
+  color: #3172a6; }
+
+.hidden {
+  opacity: 0 !important; }
+
+.hash {
+  position: absolute;
+  top: -70px; }
+
+section {
+  margin-top: 50px;
+  position: relative; }
+
+h1 {
+  font-size: 32px;
+  text-transform: uppercase;
+  color: #3172a6;
+  text-align: center; }
+
+h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #3172a6;
+  text-align: center; }
+
+h3 {
+  font-size: 24px;
+  color: #3172a6;
+  text-align: center; }
+
+.container {
+  margin: 0 15px;
+  position: relative; }
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 900px; } }
+
+footer {
+  background-color: #e8f6ff;
+  margin-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  footer .footer__data {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column; }
+    footer .footer__data__address {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    footer .footer__data__phone {
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    footer .footer__data__mails {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+      footer .footer__data__mails a {
+        color: #3172a6;
+        display: block;
+        text-align: center;
+        margin: 10px;
+        text-decoration: none; }
+  footer .footer__copy {
+    font-size: 9px;
+    text-align: center; }
+    footer .footer__copy a {
+      color: #3172a6;
+      text-align: center;
+      text-decoration: none; }
+
+#distance {
+  width: 100%;
+  height: 100px;
+  transition: all 0.4s; }
+  #distance.sticky {
+    height: 50px; }
+
+nav {
+  position: relative; }
+  nav #close-background {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 9; }
+    nav #close-background.open {
+      display: block; }
+  nav .nav {
+    position: fixed;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #e8f6ff;
+    transition: all 0.4s;
+    border-bottom: 1px solid #3172a6;
+    z-index: 11; }
+    nav .nav__logo {
+      margin-left: 10px;
+      height: 100px;
+      width: 200px;
+      background-image: url(/assets/layouts/fundacja/logo-przystan-medyczna.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: all 0.4s; }
+    nav .nav.sticky {
+      height: 50px; }
+      nav .nav.sticky .nav__logo {
+        height: 50px;
+        width: 100px; }
+      nav .nav.sticky .nav__hamburger {
+        top: 8px; }
+    nav .nav__list {
+      position: absolute;
+      top: 0;
+      left: calc(-100vw);
+      line-height: 50px;
+      width: calc(100vw - 35px - 15px);
+      max-width: 450px;
+      text-align: center;
+      background-color: white;
+      height: 100vh;
+      overflow-y: scroll;
+      border-right: 1px solid #3172a6;
+      transition-property: left, top;
+      transition-duration: 1s, 0.4s; }
+      nav .nav__list__info {
+        text-transform: uppercase;
+        color: #3172a6;
+        border-bottom: 1px solid #3172a6;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-weight: 700; }
+      nav .nav__list__triangle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0 20px;
+        border-color: #3172a6 transparent transparent transparent;
+        transition: border 0.3s; }
+        nav .nav__list__triangle--open {
+          border-width: 0 20px 20px 20px;
+          border-color: transparent transparent #3172a6 transparent; }
+      nav .nav__list__logo {
+        margin: 0 auto;
+        height: 100px;
+        width: 200px;
+        background-image: url(/assets/layouts/fundacja/logo-przystan-medyczna.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: all 0.4s; }
+      nav .nav__list li {
+        list-style: none;
+        border-bottom: 1px solid #3172a6; }
+      nav .nav__list a {
+        color: #3172a6;
+        text-decoration: none; }
+      nav .nav__list > ul {
+        display: flex;
+        flex-direction: column; }
+        nav .nav__list > ul > li {
+          display: block;
+          position: relative;
+          min-height: 50px; }
+          nav .nav__list > ul > li > ul {
+            width: 100%;
+            background-color: #e8f6ff;
+            position: relative;
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: all 0.3s ease-in-out;
+            max-height: 0; }
+            nav .nav__list > ul > li > ul.open {
+              transform: scaleY(1);
+              max-height: 250px; }
+    nav .nav__hamburger {
+      position: absolute;
+      top: 55px;
+      right: -8px;
+      height: 35px;
+      width: 35px;
+      -webkit-border-radius: 0 5px 0 5px;
+      -moz-border-radius: 0 5px 0 5px;
+      border-radius: 0 5px 0 5px;
+      background-color: #3172a6;
+      transition: all 0.4s; }
+      nav .nav__hamburger__strip {
+        width: 29px;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        left: 3px;
+        transition: all 0.7s;
+        -webkit-border-radius: 0% 0% 0% 100% / 0% 100% 0% 100%;
+        -moz-border-radius: 0% 0% 0% 100% / 0% 100% 0% 100%;
+        border-radius: 0% 0% 0% 100% / 0% 100% 0% 100%; }
+        nav .nav__hamburger__strip--top {
+          top: 7.5px; }
+        nav .nav__hamburger__strip--mid {
+          top: 50%;
+          transform: translateY(-50%);
+          opacity: 1; }
+        nav .nav__hamburger__strip--bot {
+          top: 24.5px; }
+    nav .nav.open .nav__list {
+      left: 0; }
+    nav .nav.open .nav__hamburger__strip {
+      left: 3px; }
+      nav .nav.open .nav__hamburger__strip--top {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg); }
+      nav .nav.open .nav__hamburger__strip--mid {
+        width: 35px;
+        opacity: 0;
+        left: 0;
+        height: 35px;
+        background-color: blue; }
+      nav .nav.open .nav__hamburger__strip--bot {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg); }
+
+section .about {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  opacity: 1;
+  transition: opacity 3s; }
+  section .about p {
+    margin-top: 15px;
+    text-align: center; }
+    section .about p span {
+      color: #51c170;
+      font-weight: bold; }
+
+section {
+  opacity: 1;
+  transition: opacity 3s; }
+  section .counter {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; }
+    section .counter__single {
+      opacity: 1;
+      transition: opacity 3s;
+      margin: 7px;
+      width: calc(50% - 14px);
+      border: 1px solid #3172a6;
+      color: #ffffff;
+      background-color: #3172a6;
+      font-size: 18px; }
+      section .counter__single p {
+        text-align: center;
+        text-transform: initial;
+        margin: 0;
+        padding: 5px; }
+      section .counter__single__value {
+        font-size: 22px;
+        font-weight: bold;
+        color: #51c170;
+        background-color: white; }
+
+section#movie {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  margin-top: 0; }
+  section#movie .movie {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 640px;
+    height: 360px; }
+    section#movie .movie__wrapper {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0; }
+      section#movie .movie__wrapper iframe {
+        position: absolute;
+        top: 0; }
+      section#movie .movie__wrapper__overlay {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        background: rgba(0, 0, 0, 0.3);
+        width: 100%;
+        height: 100%; }
+      section#movie .movie__wrapper__cover {
+        background-color: #3172a6;
+        position: relative;
+        width: 100%;
+        height: 360px;
+        opacity: 1;
+        transition: opacity 1s; }
+        section#movie .movie__wrapper__cover.hide {
+          opacity: 0; }
+        section#movie .movie__wrapper__cover__play {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #e8f6ff;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%; }
+          section#movie .movie__wrapper__cover__play__triangle {
+            position: absolute;
+            top: 50%;
+            left: 55%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 25px 0 25px 40px;
+            border-color: transparent transparent transparent #3172a6; }
+
+section {
+  opacity: 1;
+  transition: opacity 3s; }
+  section .feeds {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; }
+    section .feeds__single {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #3172a6;
+      margin: 10px;
+      opacity: 1;
+      transition: opacity 3s; }
+      section .feeds__single__image {
+        background-size: cover;
+        background-position: center;
+        height: 0;
+        width: 100%;
+        padding-bottom: 60%;
+        opacity: 0.8;
+        transition: opacity 0.4s; }
+        section .feeds__single__image:hover {
+          opacity: 1; }
+      section .feeds__single h3 {
+        margin-top: 10px; }
+      section .feeds__single p {
+        margin-top: 10px;
+        width: calc(100% - 1em);
+        overflow: hidden;
+        position: relative;
+        line-height: 1.4;
+        max-height: 58.8px;
+        text-align: left;
+        padding-right: 1em;
+        font-size: 14px; }
+        section .feeds__single p:before {
+          content: "...";
+          position: absolute;
+          right: 0;
+          bottom: 0; }
+        section .feeds__single p:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          width: 1em;
+          height: 1em;
+          margin-top: 0.2em;
+          background: #fff; }
+
+section#support {
+  opacity: 1;
+  transition: opacity 3s; }
+  section#support .support {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+    section#support .support .swiper-container {
+      margin-top: 20px;
+      width: 100%;
+      height: 90px; }
+      section#support .support .swiper-container .swiper-slide {
+        line-height: 150px;
+        text-align: center;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat; }
