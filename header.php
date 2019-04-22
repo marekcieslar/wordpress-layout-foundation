@@ -21,17 +21,20 @@
 
 <body <?php body_class(); ?>>
 <nav>
-    <div id="nav" class="nav">
-        <div class="container">
-            <div class="nav__logo">
-                <div id="nav-hamburger" class="nav__hamburger">
-                    <div class="nav__hamburger__strip nav__hamburger__strip--mid"></div>
-                    <div class="nav__hamburger__strip nav__hamburger__strip--top"></div>
-                    <div class="nav__hamburger__strip nav__hamburger__strip--bot"></div>
-                </div>
-            </div>
-        </div>
-        <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => 'nav__list' ) ); ?>
+  <div id="nav" class="nav">
+    <div class="container">
+      <div class="nav__logo" style="background-image:url(<?php echo get_theme_mod('mc_foundation_nav_logo'); ?>)"></div>
+      <div id="nav-hamburger" class="nav__hamburger">
+         <div class="nav__hamburger__strip nav__hamburger__strip--mid"></div>
+         <div class="nav__hamburger__strip nav__hamburger__strip--top"></div>
+         <div class="nav__hamburger__strip nav__hamburger__strip--bot"></div>
+      </div>
+    </div>
+    <div class='nav__list'>
+      <div class='nav__list__info'>menu</div>
+      <?php wp_nav_menu( array( 'theme_location' => 'header-menu', 'container_class' => '' ) ); ?>
+      <div class='nav__list__logo' style="background-image:url(<?php echo get_theme_mod('mc_foundation_nav_logo'); ?>)"></div>
+    </div>
     </div>
     <div id="close-background"></div>
 </nav>
