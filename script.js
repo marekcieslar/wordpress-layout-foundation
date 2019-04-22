@@ -1,4 +1,3 @@
-console.log('test');
 /**
  * ********************* slider - support
  */
@@ -119,7 +118,6 @@ var distance = document.getElementById("distance");
 var closeBackground = document.getElementById("close-background");
 var body = document.querySelector("body");
 
-var openSubmenus = document.querySelectorAll(".nav__list__triangle");
 var items = document.querySelectorAll(".nav__list li");
 
 var menuOpen = false;
@@ -132,8 +130,7 @@ var toggleMenu = function(ev) {
 
 var toggleSubmenuText = function(ev) {
   ev.stopPropagation();
-  this.children[1].classList.toggle("nav__list__triangle--open");
-  this.children[2].classList.toggle("open");
+  this.classList.toggle("open");
 };
 
 var l = items.length;
@@ -142,13 +139,6 @@ for (var i = 0; i < l; i++) {
     items[i].addEventListener("click", toggleMenu);
   } else items[i].addEventListener("click", toggleSubmenuText);
 }
-
-// Toggle submenu
-var toggleSubmenu = function(ev) {
-  ev.stopPropagation();
-  this.classList.toggle("nav__list__triangle--open");
-  this.nextElementSibling.classList.toggle("open");
-};
 
 // touch to open menu
 var touching = false;
@@ -181,11 +171,6 @@ var scroll = function() {
     distance.classList.remove("sticky");
   }
 };
-
-l = openSubmenus.length;
-for (var i = 0; i < l; i++) {
-  openSubmenus[i].addEventListener("click", toggleSubmenu);
-}
 
 window.addEventListener("scroll", scroll);
 hamburger.addEventListener("click", toggleMenu);
