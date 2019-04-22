@@ -1,15 +1,3 @@
-/*
-Theme Name: mc foundation
-Theme URI: http://marekcieslar.pl
-Author: Marek Cieślar
-Author URI: http://marekcieslar.pl/
-Description: to be written
-Version: 1.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: 
-Text Domain: 
-*/
 *,
 *::before,
 *::after {
@@ -176,14 +164,14 @@ nav {
       nav .nav__list a {
         color: #3172a6;
         text-decoration: none; }
-      nav .nav__list > ul {
+      nav .nav__list .nav-menu-1-container > ul {
         display: flex;
         flex-direction: column; }
-        nav .nav__list > ul > li {
+        nav .nav__list .nav-menu-1-container > ul > li {
           display: block;
           position: relative;
           min-height: 50px; }
-          nav .nav__list > ul > li.menu-item-has-children::after {
+          nav .nav__list .nav-menu-1-container > ul > li.menu-item-has-children::after {
             content: "";
             display: block;
             position: absolute;
@@ -195,13 +183,13 @@ nav {
             border-width: 20px 20px 0 20px;
             border-color: #3172a6 transparent transparent transparent;
             transition: border 0.3s; }
-          nav .nav__list > ul > li.open.menu-item-has-children::after {
+          nav .nav__list .nav-menu-1-container > ul > li.open.menu-item-has-children::after {
             border-width: 0 20px 20px 20px;
             border-color: transparent transparent #3172a6 transparent; }
-          nav .nav__list > ul > li.open > ul {
+          nav .nav__list .nav-menu-1-container > ul > li.open > ul {
             transform: scaleY(1);
             max-height: 250px; }
-          nav .nav__list > ul > li > ul {
+          nav .nav__list .nav-menu-1-container > ul > li > ul {
             width: 100%;
             background-color: #e8f6ff;
             position: relative;
